@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moses Equity Group</title>
-<meta name="description" content="Off-market UK SME acquisitions, sourced directly for search funds, independent sponsors, private equity and family offices.">
+<meta name="description" content="Off-market UK SME acquisitions, sourced directly for growing businesses, search funds, independent sponsors, private equity and family offices.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -111,7 +111,12 @@
   .step p{font-size:14px;color:var(--ink-dim);line-height:1.6;margin:0;}
 
   /* audience */
-  .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px;}
+  .audience-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:60px;}
+  @media (max-width:1100px) and (min-width:901px){
+    .audience-grid{grid-template-columns:repeat(6,1fr);}
+    .audience-grid .card{grid-column:span 2;}
+    .audience-grid .card:nth-child(n+4){grid-column:span 3;}
+  }
   .audience-grid{perspective:1200px;}
   .card{
     position:relative;
@@ -182,6 +187,7 @@
     .wrap{padding:0 24px;}
     .steps{grid-template-columns:repeat(2,1fr);row-gap:40px;}
     .audience-grid{grid-template-columns:repeat(2,1fr);}
+    .audience-grid .card:last-child{grid-column:1 / -1;}
     .flow-line{display:none;}
     .case{grid-template-columns:1fr;}
     .contact-box{flex-direction:column;align-items:flex-start;padding:44px 28px;}
@@ -205,6 +211,7 @@
     h2.display{letter-spacing:-0.5px;}
     .steps{grid-template-columns:1fr;row-gap:32px;}
     .audience-grid{grid-template-columns:1fr;}
+    .audience-grid .card:last-child{grid-column:auto;}
     .case-logo{padding:34px 28px;}
     .case-body{padding:30px 22px;}
     .stats{grid-template-columns:1fr;gap:18px;}
@@ -238,7 +245,7 @@
   <canvas id="net"></canvas>
   <div class="wrap hero-inner">
     <h1 class="display">Off-market deal flow,<br><em>found before it's listed.</em></h1>
-    <p class="lead">Moses Equity Group sources UK SME acquisitions directly from owners, then structures and introduces them to search funds, independent sponsors, private equity and family offices.</p>
+    <p class="lead">Moses Equity Group sources UK SME acquisitions directly from owners, then structures and introduces them to growing businesses, search funds, independent sponsors, private equity and family offices.</p>
     <div class="ctas">
       <a class="btn filled" href="#contact">Start a conversation</a>
       <a class="btn" href="#process">See how it works</a>
@@ -287,6 +294,11 @@
     <h2 class="display reveal">Built for people who buy businesses, not just look at them.</h2>
 
     <div class="audience-grid reveal">
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3.5 20.5h17"/><rect x="5" y="11" width="5" height="9.5"/><rect x="14" y="7" width="5" height="13.5"/><path d="M4.5 8 10 3.5l3.5 3L19.5 2"/><path d="M16 2h3.5v3.5"/></svg>
+        <h3>Growing businesses</h3>
+        <p>Operators buying competitors to scale, with off-market targets sourced to your size and sector.</p>
+      </div>
       <div class="card">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"/></svg>
         <h3>Search funds</h3>
