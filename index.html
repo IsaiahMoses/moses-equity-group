@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Moses Equity Group</title>
+<title>Moses Equity Group | Property Management Acquisitions</title>
 <meta name="description" content="Off-market acquisitions of UK property management and lettings businesses, sourced directly from owners for growing agencies, property investors, independent sponsors, private equity and family offices.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
@@ -166,6 +166,35 @@
   .stat .cap{font-size:13px;color:var(--ink-dim);line-height:1.5;margin-top:10px;}
   .case .more{align-self:flex-start;}
 
+
+  /* sector strip */
+  .sector-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;}
+  .sector-strip .row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 30px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-dim);}
+  .sector-strip .row span{display:inline-flex;align-items:center;gap:10px;}
+  .sector-strip svg{width:16px;height:16px;opacity:.8;}
+
+  /* focus */
+  .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px;}
+  .focus-grid .card{padding:34px 28px;}
+  .checks{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);}
+  .checks > div{padding:26px 24px;border-right:1px solid var(--line);}
+  .checks > div:last-child{border-right:none;}
+  .checks .k{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-dim);margin-bottom:10px;}
+  .checks .v{font-size:15px;line-height:1.5;}
+
+  /* owners */
+  .assure{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:50px 0 40px;}
+  .assure div{border-top:1px solid var(--line);padding-top:20px;}
+  .assure h3{font-size:16px;font-weight:600;margin:0 0 8px;}
+  .assure p{font-size:14px;color:var(--ink-dim);line-height:1.6;margin:0;}
+  .owner-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+
+  /* about */
+  .about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:60px;align-items:center;}
+  .about img{width:100%;height:auto;max-width:360px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:1px solid var(--line);display:block;}
+  .about .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .about .facts span{font-size:12.5px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-dim);}
+
   /* contact */
   .contact-box{
     border:1px solid var(--line);
@@ -190,6 +219,12 @@
     .audience-grid .card:last-child{grid-column:1 / -1;}
     .flow-line{display:none;}
     .case{grid-template-columns:1fr;}
+    .focus-grid,.assure{grid-template-columns:1fr;}
+    .checks{grid-template-columns:repeat(2,1fr);}
+    .checks > div:nth-child(2){border-right:none;}
+    .checks > div:nth-child(-n+2){border-bottom:1px solid var(--line);}
+    .about{grid-template-columns:1fr;gap:36px;}
+    .about img{max-width:220px;}
     .contact-box{flex-direction:column;align-items:flex-start;padding:44px 28px;}
     .contact-box > div{align-items:flex-start !important;width:100%;}
     nav{gap:14px;}
@@ -215,6 +250,12 @@
     .case-logo{padding:34px 28px;}
     .case-body{padding:30px 22px;}
     .stats{grid-template-columns:1fr;gap:18px;}
+    .checks{grid-template-columns:1fr;}
+    .checks > div{border-right:none !important;border-bottom:1px solid var(--line);}
+    .checks > div:last-child{border-bottom:none;}
+    .owner-ctas{flex-direction:column;align-items:stretch;}
+    .owner-ctas .btn{justify-content:center;}
+    .sector-strip .row{letter-spacing:1.5px;font-size:11.5px;gap:10px 22px;}
     .contact-box{padding:32px 22px;gap:26px;}
     .contact-box .btn{width:100%;justify-content:center;}
     .foot-row{flex-direction:column;align-items:flex-start;}
@@ -234,9 +275,11 @@
     <div class="name">Moses Equity Group</div>
   </div>
   <nav>
+    <a class="navlink" href="#focus">Focus</a>
     <a class="navlink" href="#process">Process</a>
     <a class="navlink" href="#audience">Who we work with</a>
     <a class="navlink" href="#owners">For owners</a>
+    <a class="navlink" href="#about">About</a>
     <a class="navlink" href="clients.html">Clients</a>
     <a class="btn filled" href="#contact">Get in touch</a>
   </nav>
@@ -253,6 +296,48 @@
     </div>
   </div>
   <div class="scroll-cue"><span class="line"></span> Scroll</div>
+</section>
+
+<div class="sector-strip">
+  <div class="wrap row">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="15" r="4"/><path d="M11 12 20 3M16 7l3 3M14 9l2 2"/></svg>Lettings agencies</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3.5" width="11" height="17"/><path d="M15 9.5h5v11h-5"/><path d="M7.5 7h1.5M10.5 7H12M7.5 10.5h1.5M10.5 10.5H12M7.5 14h1.5M10.5 14H12M9 20.5v-3h1.5v3"/></svg>Property management companies</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5v11h13v-11"/><path d="M10 20.5v-5h4v5"/></svg>Landlord portfolios</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/></svg>Managed lettings books</span>
+  </div>
+</div>
+
+<section id="focus">
+  <div class="wrap">
+    <div class="label reveal">Our focus</div>
+    <h2 class="display reveal">Property management is all we do.</h2>
+    <p class="body-lg reveal">We specialise in UK residential lettings and property management businesses, so we understand what drives their value and what buyers check first.</p>
+
+    <div class="focus-grid reveal">
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="15" r="4"/><path d="M11 12 20 3M16 7l3 3M14 9l2 2"/></svg>
+        <h3>Lettings &amp; management agencies</h3>
+        <p>Independent, owner-led agencies with a managed book of landlords and recurring management fee income.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5v11h13v-11"/><path d="M10 20.5v-5h4v5"/></svg>
+        <h3>Managed portfolios</h3>
+        <p>Owners who want to sell all or part of their managed book, rather than the whole business.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3.5" width="11" height="17"/><path d="M15 9.5h5v11h-5"/><path d="M7.5 7h1.5M10.5 7H12M7.5 10.5h1.5M10.5 10.5H12M7.5 14h1.5M10.5 14H12M9 20.5v-3h1.5v3"/></svg>
+        <h3>Property management companies</h3>
+        <p>Established residential management businesses looking at succession, a partial exit or a growth partner.</p>
+      </div>
+    </div>
+
+    <div class="checks reveal">
+      <div><div class="k">Managed units</div><div class="v">Size and quality of the landlord book</div></div>
+      <div><div class="k">Recurring income</div><div class="v">Management fees versus one-off letting fees</div></div>
+      <div><div class="k">Concentration</div><div class="v">No over-reliance on a single landlord</div></div>
+      <div><div class="k">Compliance</div><div class="v">Client money, deposits and licensing in order</div></div>
+    </div>
+  </div>
 </section>
 
 <section id="process">
@@ -276,8 +361,8 @@
         </div>
         <div class="step" data-i="2">
           <div class="node">03</div>
-          <h3>Structuring</h3>
-          <p>Opportunities framed for how agencies and investors actually evaluate a portfolio or business.</p>
+          <h3>Packaging</h3>
+          <p>A clear, confidential summary of each opportunity, framed for how agencies and investors evaluate a portfolio or business.</p>
         </div>
         <div class="step" data-i="3">
           <div class="node">04</div>
@@ -352,7 +437,36 @@
   <div class="wrap">
     <div class="label reveal">For agency owners</div>
     <h2 class="display reveal">A discreet route to sale, on your terms.</h2>
-    <p class="body-lg reveal">No public listing and no broker-run auction. Every conversation is confidential, and continuity for your landlords, tenants and team is treated as seriously as price. Whether you're planning retirement, a partial exit or the sale of your managed portfolio, we'll introduce you only to buyers who genuinely fit.</p>
+    <p class="body-lg reveal">Whether you're planning retirement, a partial exit or the sale of your managed portfolio, we'll introduce you only to buyers who genuinely fit. No public listing and no broker-run auction.</p>
+
+    <div class="assure reveal">
+      <div><h3>Fully confidential</h3><p>Your name and business are never shared without your agreement. Buyers sign an NDA first.</p></div>
+      <div><h3>No obligation</h3><p>An informal conversation about your options, with no commitment to sell.</p></div>
+      <div><h3>Vetted buyers only</h3><p>Introductions only to buyers whose criteria and funding fit your business.</p></div>
+    </div>
+
+    <div class="owner-ctas reveal">
+      <a class="btn filled" href="mailto:isaiah@mosesequitygroup.co.uk?subject=Confidential%20conversation">Book a confidential call</a>
+      <a class="btn" href="mailto:isaiah@mosesequitygroup.co.uk?subject=Agency%20valuation%20question">Ask what my agency is worth</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <img class="reveal" src="isaiah-moses.jpg" alt="Isaiah Moses, founder of Moses Equity Group" width="640" height="640">
+    <div class="reveal">
+      <div class="label">About</div>
+      <h2 class="display">Isaiah Moses, founder.</h2>
+      <p class="body-lg">I founded Moses Equity Group to give owners of UK property management businesses a better route to sale, and to give acquirers access to businesses they would never otherwise see. I speak to every owner personally and only make introductions I'd stand behind.</p>
+      <p class="body-lg">My background is in engineering and data. I hold an MEng in Mechanical Engineering from Loughborough University and work in CRM and data analytics, which shapes how I find, qualify and track every opportunity.</p>
+      <div class="facts">
+        <span>30+ off-market opportunities sourced</span>
+        <span>Acquisition taken to Heads of Terms</span>
+        <span>MEng, Loughborough University</span>
+      </div>
+      <div style="margin-top:30px;"><a class="btn" href="https://www.linkedin.com/in/isaiah-moses/" target="_blank" rel="noopener">Connect on LinkedIn &rarr;</a></div>
+    </div>
   </div>
 </section>
 
@@ -373,7 +487,7 @@
 
 <footer>
   <div class="wrap foot-row">
-    <div class="foot-brand"><div class="tile" style="width:22px;height:22px;font-size:11px;">M</div> Moses Equity Group, United Kingdom</div>
+    <div class="foot-brand"><div class="tile" style="width:22px;height:22px;font-size:11px;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700;">M</div> Moses Equity Group, London, United Kingdom</div>
     <div class="foot-links">
       <a href="mailto:isaiah@mosesequitygroup.co.uk">Email</a>
       <a href="https://www.linkedin.com/in/isaiah-moses/" target="_blank" rel="noopener">LinkedIn</a>
@@ -381,6 +495,7 @@
       <a href="#process">Process</a>
       <a href="#audience">Who we work with</a>
       <a href="clients.html">Clients</a>
+      <a href="privacy.html">Privacy</a>
     </div>
   </div>
 </footer>
