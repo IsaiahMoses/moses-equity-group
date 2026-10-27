@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mosesequitygroup.co.uk/sitemap.xml
